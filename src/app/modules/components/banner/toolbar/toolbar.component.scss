@@ -1,0 +1,41 @@
+#toolbar {
+  padding-bottom: 9px;
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+
+
+  border-bottom: 1px solid #8C8C8C;
+}
+
+.leftSide {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.righSide {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toolbarElement {
+  padding: 5px 10px;
+  margin-right: 30px;
+  margin-bottom: 0;
+
+  font-size: 1.20em;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.22s ease-in-out;
+}
+
+.tool:hover {
+  background: rgba(146, 146, 146, 0.23);
+}
+
+#login {
+  color: #806DFA;
+}
