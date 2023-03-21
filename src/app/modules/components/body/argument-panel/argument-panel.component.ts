@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ArgumentService} from "../../../../shared/services/argument.service";
+import {Argument} from "../../../../shared/models/Argument";
 
 @Component({
   selector: 'app-argument-panel',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./argument-panel.component.scss']
 })
 export class ArgumentPanelComponent {
+  arguments!: Argument[];
+  constructor(private argumentService: ArgumentService) { }
 
+  ngOnInit() {
+    this.argumentService.getArguments(10).subscribe((data) => {
+      console.log(data);
+      this.arguments = data;
+    });
+  }
 }
