@@ -32,10 +32,10 @@
   transition: background-color 0.22s ease-in-out;
 }
 
-.tool:hover {
+.toolbarElement:hover {
   background: rgba(146, 146, 146, 0.23);
 }
 
 #login {
-  color: #806DFA;
+  color: var(--main-color);
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ArgumentService} from "../../../../shared/services/argument.service";
 import {Argument} from "../../../../shared/models/Argument";
 
@@ -7,7 +7,7 @@ import {Argument} from "../../../../shared/models/Argument";
   templateUrl: './argument-panel.component.html',
   styleUrls: ['./argument-panel.component.scss']
 })
-export class ArgumentPanelComponent {
+export class ArgumentPanelComponent implements OnInit{
   arguments!: Argument[];
   constructor(private argumentService: ArgumentService) { }
 

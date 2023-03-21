@@ -1,4 +1,9 @@
-<div *ngFor="let argument of arguments">
-    <p>{{argument.title}}</p>
-    <p>{{argument.description}}</p>
+<div *ngFor="let argument of arguments" class="argumentPanel">
+    <div class="argument-main">
+      <h3 class="argumentTitle">{{argument.title}}</h3>
+      <p>{{argument.description}}</p>
+    </div>
+  <div class="categories">
+    catégories
+  </div>
 </div>
