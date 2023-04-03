@@ -1,6 +1,6 @@
 export class ServerData {
   private static instance: ServerData;
-  private serverUrl: string = 'http://localhost:';
+  private serverUrl: string = 'http://10.26.128.2:';
   private serverPort: string = '8080';
   private constructor() {}
   public static getInstance(): ServerData {
