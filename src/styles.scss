@@ -1,3 +1,107 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-light-theme: (
+  50 : #eff5fc,
+  100 : #d7e7f8,
+  200 : #bdd7f4,
+  300 : #a3c6ef,
+  400 : #8fbaeb,
+  500 : #7baee8,
+  600 : #73a7e5,
+  700 : #689de2,
+  800 : #5e94de,
+  900 : #4b84d8,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #cce0ff,
+  A700 : #b3d0ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-defaul-theme: (
+  50 : #f0edfe,
+  100 : #d9d3fe,
+  200 : #c0b6fd,
+  300 : #a699fc,
+  400 : #9383fb,
+  500 : #806dfa,
+  600 : #7865f9,
+  700 : #6d5af9,
+  800 : #6350f8,
+  900 : #503ef6,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #e1deff,
+  A700 : #cac4ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$PoliticFront-primary: mat.define-palette($md-defaul-theme);
+$PoliticFront-accent: mat.define-palette($md-light-theme, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$PoliticFront-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$PoliticFront-theme: mat.define-light-theme((
+  color: (
+    primary: $PoliticFront-primary,
+    accent: $PoliticFront-accent,
+    warn: $PoliticFront-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($PoliticFront-theme);
+
 /* You can add global styles to this file, and also import other style files */
 
 body {
@@ -8,4 +112,14 @@ body {
 
 :root {
   --main-color: #806DFA;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
