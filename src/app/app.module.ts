@@ -14,6 +14,7 @@ import {CheckboxModule} from "primeng/checkbox";
 import {MultiSelectModule} from "primeng/multiselect";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
+import { CategoryListComponent } from './modules/components/body/category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {HttpClientModule} from "@angular/common/http";
     ToolbarComponent,
     SearchBarComponent,
     ArgumentPanelComponent,
-    FilterCheckboxComponent
+    FilterCheckboxComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
