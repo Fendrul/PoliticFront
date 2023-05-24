@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import {CategoryListComponent} from './modules/components/body/category-list/category-list.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     MultiSelectModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
