@@ -19,6 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {CategoryListComponent} from './modules/components/body/category-list/category-list.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatButtonModule} from "@angular/material/button";
+import { CategoryPanelComponent } from './modules/components/body/category-list/category-panel/category-panel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MatButtonModule} from "@angular/material/button";
     SearchBarComponent,
     ArgumentPanelComponent,
     FilterCheckboxComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    CategoryPanelComponent
   ],
   imports: [
     BrowserModule,

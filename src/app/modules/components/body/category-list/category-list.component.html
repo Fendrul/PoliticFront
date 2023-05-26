@@ -1,4 +1,7 @@
-<section *ngFor="let category of categories" class="rename_me">
-  {{category.name}}
-</section>
+<div class="wrapper">
+  <section *ngFor="let category of categories" class="category_panel">
+    <app-category-panel [category]="category"></app-category-panel>
+  </section>
+</div>
+
 
