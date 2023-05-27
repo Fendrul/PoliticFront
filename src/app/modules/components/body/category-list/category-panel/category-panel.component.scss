@@ -1,13 +1,14 @@
 .category {
   text-decoration: none;
   color: black;
-  transition: color 0.15s ease-in-out;
-
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   padding: 5px 10px;
-  border: brown solid 2px;
+  border: var(--main-color-light) solid 2px;
   border-radius: 10px;
 }
 
 .category:hover {
-  color: var(--main-color);
+  color: white;
+  background-color: var(--main-color-light);
 }

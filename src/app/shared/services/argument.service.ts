@@ -19,9 +19,21 @@ export class ArgumentService {
   }
 
   getArgumentFromCategoryId(categoryId: number) {
-    return this.http.get<Argument[]>(this.apiURL + "/category/" + categoryId)
+    //print in the console the result of this.http.get<Argument[]>(this.apiURL + "/category/" + categoryId)
+    let result = this.http.get<Argument[]>(this.apiURL + "/category/" + categoryId);
+
+    // result.subscribe((data) => {
+    //   console.log(data);
+    // });
+
+    return result;
   }
 }
+
+export const argumentsResolver: ResolveFn<Argument[]> =
+  (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+    return inject(ArgumentService).getArguments(10);
+  }
 
 export const argumentsByCategoryIdResolver: ResolveFn<Argument[]> =
   (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
